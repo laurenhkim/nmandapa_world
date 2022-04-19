@@ -1,6 +1,5 @@
 class Article < ApplicationRecord
-    has_many :categories
-
+    belongs_to :category
     scope :active, 			 -> { where('active = ?', true) }
   	scope :alphabetical, -> { order('title') }
 
